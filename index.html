@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>津輕黑石東亞主權聯合民主共和國聯盟</title>
+    <style>
+        /* Variables for easy color management - Light Mode (Default) */
+        :root {
+            --bg-color: #f0f2f5; /* Light grey */
+            --text-color: #333; /* Dark grey */
+            --section-bg: #FFFFFF; /* Pure white */
+            --nav-bg: rgba(31, 78, 121, 0.7); /* Translucent Navy Blue */
+            --nav-item-bg: rgba(255, 255, 255, 0.1);
+            --nav-item-hover: #43536A; /* Sunset Gold */
+            --footer-bg: #1D2C4D; /* Navy Blue */
+            --footer-text: #FFFFFF;
+            --h1-color: #1D2C4D; /* Navy Blue */
+            --h2-color: #EB0243; /* Wenshan Green */
+            --h3-color: #43536A; /* Sunset Gold */
+            --h4-color: #1D2C4D; /* Navy Blue */
+            --table-header-bg: #1D2C4D; /* Navy Blue */
+            --table-header-text: #FFFFFF;
+            --table-row-even: #f6f8fa; /* Lighter zebra striping */
+            --table-row-hover: #eaf2f8; /* Softer hover color */
+            --table-category-bg: #e0e2e6; /* Medium grey */
+            --hr-color: #e0e2e6; /* Medium grey */
+            --border-color-light: rgba(255, 255, 255, 0.3); /* For glass border */
+            --box-shadow-light: rgba(0, 0, 0, 0.1);
+            --box-shadow-medium: rgba(0,0,0,0.08);
+            --box-shadow-dark: rgba(0,0,0,0.15);
+            --box-shadow-nav-item: rgba(0,0,0,0.05);
+            --box-shadow-nav-item-hover: rgba(0,0,0,0.2);
+            --text-shadow-nav-title: rgba(0,0,0,0.3);
+            --flag-border: rgba(0,0,0,0.1);
+            --pure-white: #FFFFFF; /* Moved to root for better variable usage */
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            --bg-color: #1a1a2e; /* Dark background */
+            --text-color: #e0e0e0; /* Light text */
+            --section-bg: #2a2a4a; /* Darker section background */
+            --nav-bg: rgba(25, 25, 45, 0.7); /* Darker translucent nav */
+            --nav-item-bg: rgba(255, 255, 255, 0.05);
+            --nav-item-hover: #43536A; /* Sunset Gold (can keep same or adjust) */
+            --footer-bg: #16213e; /* Even darker footer */
+            --footer-text: #e0e0e0;
+            --h1-color: #CCD1D7; /* Light blue */
+            --h2-color: #FCC6D6; /* Light green */
+            --h3-color: #FCC6D6; /* Gold */
+            --h4-color: #CCD1D7; /* Light blue */
+            --table-header-bg: #16213e; /* Dark table header */
+            --table-header-text: #FFFFFF;
+            --table-row-even: #21213c; /* Darker zebra striping */
+            --table-row-hover: #35355a; /* Darker hover */
+            --table-category-bg: #3c3c6a;
+            --hr-color: #3c3c6a;
+            --border-color-light: rgba(255, 255, 255, 0.1);
+            --box-shadow-light: rgba(0, 0, 0, 0.2);
+            --box-shadow-medium: rgba(0,0,0,0.15);
+            --box-shadow-dark: rgba(0,0,0,0.25);
+            --box-shadow-nav-item: rgba(0,0,0,0.1);
+            --box-shadow-nav-item-hover: rgba(0,0,0,0.3);
+            --text-shadow-nav-title: rgba(0,0,0,0.5);
+            --flag-border: rgba(255,255,255,0.1);
+        }
+
+        /* 定義 Noto Sans TC 本地字體 */
+        @font-face {
+            font-family: 'Noto Sans TC Local'; /* 給字體一個新的名稱 */
+            src: url('assets/fonts/NotoSansTC-Thin.ttf') format('truetype');
+            font-weight: 100; /* 或您實際的 Thin 字重 */
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Noto Sans TC Local';
+            src: url('assets/fonts/NotoSansTC-ExtraLight.ttf') format('truetype');
+            font-weight: 200; /* 或您實際的 ExtraLight 字重 */
+            font-style: normal;
+        }
+        /* 圖片中沒有Light.ttf 和 Regular.ttf，如果您有請加入 */
+        /* @font-face {
+            font-family: 'Noto Sans TC Local';
+            src: url('assets/fonts/NotoSansTC-Light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Noto Sans TC Local';
+            src: url('assets/fonts/NotoSansTC-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        } */
+        @font-face {
+            font-family: 'Noto Sans TC Local';
+            src: url('assets/fonts/NotoSansTC-Medium.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Noto Sans TC Local';
+            src: url('assets/fonts/NotoSansTC-SemiBold.ttf') format('truetype');
+            font-weight: 600; /* 或您實際的 SemiBold 字重 */
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Noto Sans TC Local';
+            src: url('assets/fonts/NotoSansTC-Bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Noto Sans TC Local';
+            src: url('assets/fonts/NotoSansTC-ExtraBold.ttf') format('truetype');
+            font-weight: 800; /* 或您實際的 ExtraBold 字重 */
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Noto Sans TC Local';
+            src: url('assets/fonts/NotoSansTC-Black.ttf') format('truetype');
+            font-weight: 900; /* 或您實際的 Black 字重 */
+            font-style: normal;
+        }
+        /* 如果您需要可變字體 (Variable Font) */
+        @font-face {
+            font-family: 'Noto Sans TC Local VF'; /* 可變字體通常給單獨的名稱 */
+            src: url('assets/fonts/NotoSansTC-VF.ttf') format('truetype');
+            font-weight: 100 900; /* 定義字重範圍 */
+            font-style: normal;
+        }
+
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC Local', sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        /* Utility for Glassmorphism */
+        .glass-effect {
+            background-color: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color-light);
+            box-shadow: 0 4px 30px var(--box-shadow-light);
+        }
+
+        /* Navigation Bar - 調整主要佈局 */
+        nav {
+            background-color: var(--nav-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 0.5rem 1.5rem; /* 減少垂直填充，增加左右填充 */
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px var(--box-shadow-dark);
+            border-bottom: 1px solid var(--border-color-light);
+            width: 100%;
+            display: flex;
+            flex-direction: row; /* **關鍵改動：讓標題和連結水平排列** */
+            justify-content: space-between; /* 標題靠左，連結靠右 */
+            align-items: center; /* 垂直居中對齊 */
+            gap: 1rem; /* 標題和連結之間的間距 */
+            flex-wrap: wrap; /* 允許在小螢幕上換行 */
+        }
+
+        .nav-title {
+            color: var(--pure-white);
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-shadow: 0 2px 4px var(--text-shadow-nav-title);
+            letter-spacing: 0.1em;
+            /* 移除 padding-bottom 以減少垂直高度 */
+            white-space: nowrap;
+            word-break: keep-all;
+            flex-shrink: 0; /* 防止標題被壓縮 */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end; /* 讓連結靠右對齊 */
+            align-items: center;
+            gap: 1.2rem;
+            flex-wrap: wrap; /* 允許連結在空間不足時換行 */
+            padding: 0; /* 移除 ul 內部的填充 */
+            width: auto; /* 讓 ul 只佔用其內容所需的寬度 */
+            flex-grow: 1; /* 允許 ul 填充剩餘空間 */
+        }
+
+        nav li {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a, #mode-toggle {
+            color: var(--pure-white);
+            text-decoration: none;
+            padding: 0.7rem 1.2rem;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            font-weight: 500;
+            white-space: nowrap;
+            background-color: var(--nav-item-bg);
+            box-shadow: 0 2px 5px var(--box-shadow-nav-item);
+            border: none;
+            cursor: pointer;
+            font-family: 'Noto Sans TC Local', sans-serif;
+            font-size: 1rem;
+        }
+
+        nav a:hover, #mode-toggle:hover {
+            background-color: var(--nav-item-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px var(--box-shadow-nav-item-hover);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            width: 90%;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background-color: var(--section-bg);
+            margin-bottom: 2.5rem;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px var(--box-shadow-medium);
+            overflow: hidden;
+            position: relative;
+            transition: background-color 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        /* Section border accents */
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        #basic-info::before { background-color: #43536A; }
+        #government::before { background-color: #EB0243; }
+        #diplomatic::before { background-color: #1F4E79; }
+        #history::before { background-color: #43536A; }
+        #diplomacy::before { background-color: #EB0243; }
+        #announcements::before { background-color: #1F4E79; }
+        #transportation::before { background-color: #43536A; }
+        #updates::before { background-color: #EB0243; }
+
+        h1 {
+            color: var(--h1-color);
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 3.2rem;
+            font-weight: 700;
+            padding-top: 1.5rem;
+            letter-spacing: 0.05em;
+            word-break: keep-all;
+            white-space: nowrap;
+            transition: color 0.5s ease;
+        }
+
+        h2 {
+            color: var(--h2-color);
+            margin-bottom: 2rem;
+            font-size: 2.4rem;
+            padding-bottom: 0.8rem;
+            position: relative;
+            word-break: keep-all;
+            white-space: nowrap;
+            transition: color 0.5s ease;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 80px;
+            height: 4px;
+            background-color: var(--h2-color);
+            border-radius: 2px;
+            transition: background-color 0.5s ease;
+        }
+
+        h3 {
+            color: var(--h3-color);
+            margin: 2.5rem 0 1.2rem 0;
+            font-size: 1.9rem;
+            font-weight: 600;
+            word-break: keep-all;
+            white-space: nowrap;
+            transition: color 0.5s ease;
+        }
+
+        h4 {
+            color: var(--h4-color);
+            margin: 1.5rem 0 1rem 0;
+            font-size: 1.5rem;
+            font-weight: 500;
+            word-break: keep-all;
+            white-space: nowrap;
+            transition: color 0.5s ease;
+        }
+
+        h5 {
+            font-weight: bold;
+            margin-top: 1.2rem;
+            font-size: 1.15rem;
+            color: var(--text-color);
+            word-break: keep-all;
+            white-space: nowrap;
+            transition: color 0.5s ease;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            transition: color 0.5s ease;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 2rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px var(--box-shadow-medium);
+        }
+
+        th, td {
+            border: none;
+            padding: 1.1rem;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 0.98rem;
+            white-space: nowrap;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        th {
+            background-color: var(--table-header-bg);
+            color: var(--table-header-text);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tbody tr:hover {
+            background-color: var(--table-row-hover);
+            transform: scale(1.02);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        /* Specific style for category rows in diplomatic list */
+        .diplomatic-list tbody tr td[colspan="6"] {
+            background-color: var(--table-category-bg) !important;
+            font-weight: bold;
+            color: var(--h1-color);
+            padding: 0.7rem;
+            font-size: 1.1rem; /* 增大字體大小 */
+            white-space: nowrap;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        /* Image Styles */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 2rem auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px var(--box-shadow-light);
+            transition: transform 0.3s ease, box-shadow 0.5s ease;
+        }
+
+        img:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Diplomatic List Specific Styles */
+        .diplomatic-list {
+            overflow-x: auto;
+            margin-top: 2rem;
+        }
+
+        .diplomatic-list table {
+            min-width: 900px;
+        }
+
+        .diplomatic-list img {
+            height: 28px;
+            width: auto;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+            box-shadow: none;
+            border-radius: 4px;
+            border: 1px solid var(--flag-border);
+            transition: border-color 0.5s ease;
+        }
+
+        .diplomatic-list td:first-child {
+            font-weight: bold;
+        }
+
+        /* Horizontal Rule (Divider) */
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, rgba(0,0,0,0), var(--hr-color), rgba(0,0,0,0));
+            margin: 3.5rem 0;
+            transition: background 0.5s ease;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2.5rem;
+            margin-top: 4rem;
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            font-size: 0.95rem;
+            border-top: 8px solid #43536A;
+            border-radius: 15px 15px 0 0;
+            width: 100%;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            main {
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 992px) {
+            main {
+                max-width: 95%;
+                padding: 0 1rem;
+            }
+            h1 { font-size: 2.8rem; }
+            h2 { font-size: 2.2rem; }
+            h3 { font-size: 1.8rem; }
+            h4 { font-size: 1.4rem; }
+            h5 { font-size: 1.1rem; }
+            p { font-size: 1rem; }
+            section { padding: 2rem; }
+            .diplomatic-list table { min-width: 800px; }
+            .nav-title { font-size: 2rem; }
+        }
+
+        @media (max-width: 768px) {
+            /* 在小螢幕上，讓導航列內容垂直堆疊 */
+            nav {
+                flex-direction: column; /* 重新設定為垂直排列 */
+                justify-content: center; /* 內容居中 */
+                align-items: center; /* 內容垂直居中 */
+                padding: 0.5rem 0; /* 調整垂直填充 */
+            }
+            .nav-title {
+                font-size: 1.8rem;
+                padding-bottom: 0.5rem; /* 標題下方增加間距 */
+                margin-right: 0; /* 移除右側間距 */
+            }
+            nav ul {
+                flex-direction: column; /* 連結項目垂直堆疊 */
+                align-items: stretch; /* 連結項目拉伸至寬度 */
+                gap: 0.5rem;
+                padding: 0 1rem; /* 增加左右填充 */
+                width: 100%; /* 佔滿可用寬度 */
+                flex-grow: 0; /* 不再填充空間 */
+            }
+            nav a, #mode-toggle {
+                border-radius: 10px;
+                text-align: center;
+            }
+            main {
+                padding: 0 1rem;
+            }
+            section {
+                padding: 1.8rem;
+                border-radius: 10px;
+            }
+            section::before {
+                height: 5px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            h2::after { width: 60px; height: 3px; }
+            h3 { font-size: 1.6rem; }
+            th, td {
+                padding: 0.8rem;
+                white-space: normal;
+                word-break: break-word;
+            }
+            .diplomatic-list img { height: 20px; }
+            footer { border-radius: 10px 10px 0 0; }
+        }
+
+        @media (max-width: 480px) {
+            .nav-title { font-size: 1.5rem; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            h3 { font-size: 1.4rem; }
+            p { font-size: 0.95rem; }
+            section { padding: 1.2rem; }
+            .diplomatic-list table { min-width: 600px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-title">津輕黑石東亞主權聯合民主共和國聯盟</div>
+        <ul>
+            <li><a href="#basic-info">國書演變</a></li>
+            <li><a href="#government">公告演變</a></li>
+            <li><a href="#diplomatic">總統令</a></li>
+            <li><button id="mode-toggle">切換模式 (深/淺)</button></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="basic-info">
+
+            <h2>國書演變</h2>
+
+            <h3>紅字公告</h3>
+            <img src="assets/image/紅字公告.png" alt="紅字公告" width="30%">
+            <p>並未有正式名稱</p>
+            <p>是之後所有國家之<strong>國書格式</strong>基礎</p>
+
+            <h3>過渡公告</h3>
+            <img src="assets/image/過渡公告.png" alt="紅字公告" width="30%">
+            <p>僅出現一次是在紅字公告與類似於中華民國公告的格式的過渡，與當年正介民國同形，之後並未出現國旗</p>
+
+            <h3>簍空字公告</h3>
+            <img src="assets/image/簍空字公告.png" alt="簍空字公告" width="30%">
+            <p>極少出現，現已被國書取代</p>
+
+            <h3>金邊與銀邊國書(現在使用)</h3>
+            <img src="assets/image/金邊國書.png" alt="金邊國書" width="30%">
+            <img src="assets/image/銀邊國書.png" alt="銀邊國書" width="30%">
+            <p>金邊國書是在簍空字公告之後出現，完全採用日式，銀邊次等於金邊</p>
+
+        </section>
+
+        <section id="government">
+
+            <h2>公告演變</h2>
+            
+            <h3>紅字公告</h3>
+            <img src="assets/image/紅字公告.png" alt="紅字公告" width="30%">
+            <p>並未有正式名稱</p>
+            <p>是之後所有國家之<strong>國書格式</strong>基礎</p>
+
+            <h3>外交院公告</h3>
+            <img src="assets/image/外交院公告.png" alt="外交院公告" width="30%">
+            <p>僅只有外交院使用，是紅字公告的分支，之後也為其他部門公告的版本</p>
+
+            <h3>中式公文</h3>
+            <img src="assets/image/中式公文.png" alt="中式公告" width="30%">
+            <p>印章移至右上角，新增機關首長職稱以及簽章</p>
+
+            <h3>中古公文</h3>
+            <img src="assets/image/現用公文(正).png" alt="中式公告" width="30%">
+            <img src="assets/image/現用公文(被).png" alt="中式公告" width="30%">
+            <p>印章移至右上角，新增機關首長職稱以及簽章</p>
+            <p>現用之其非同點於機關首長職稱以及簽章，新增小印章，相關單位章</p>
+
+            <h3>現代公文</h3>
+            <img src="assets/image/新公文.png" alt="中式公告" width="30%">
+            <p>印章有顛覆性改革</p>
+
+        </section>
+
+        <section id="government">
+
+            <h2>總統令</h2>
+
+            <h3>第一代總統令</h3>
+            <img src="assets/image/總統令.png" alt="總統令" width="30%">
+            <p></p>
+
+            <h3>第二代總統令</h3>
+            <img src="assets/image/第二代總統令.png" alt="中式公告" width="30%">
+            <p>更改排版，增加顏色與印章</p>
+
+            <h3>第三代總統令</h3>
+            <img src="assets/image/第三代總統令.png" alt="中式公告" width="30%">
+            <p>加大印章尺寸</p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Mounddies Headgovern. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const modeToggle = document.getElementById('mode-toggle');
+        const body = document.body;
+
+        // Check for saved theme preference
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            body.classList.add(currentTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // Check for OS preference if no saved theme
+            body.classList.add('dark-mode');
+        }
+
+        modeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            let theme = 'light-mode'; // Default to light
+            if (body.classList.contains('dark-mode')) {
+                theme = 'dark-mode';
+            }
+            localStorage.setItem('theme', theme); // Save preference
+        });
+    </script>
+</body>
+</html>
